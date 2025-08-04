@@ -526,20 +526,23 @@ export default function EventModal({ title, description, children }: EventModalP
           >
             {/* Header with Close Button */}
             <div className="flex-shrink-0 flex items-center justify-between p-3 sm:p-4 lg:p-6 bg-card/95 backdrop-blur-md border-b border-primary/20 rounded-t-xl relative">
-              <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-primary pr-12 flex-1 min-w-0">
+              <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-primary pr-16 flex-1 min-w-0">
                 <span className="truncate block">{title}</span>
               </h2>
               <button 
                 onClick={handleClose}
-                className="absolute top-3 right-3 sm:top-4 sm:right-4 lg:top-6 lg:right-6 z-[10000] bg-red-600 hover:bg-red-700 text-white rounded-full p-1.5 sm:p-2 transition-all duration-200 shadow-lg border-2 border-white/50 hover:border-white flex items-center justify-center min-w-[32px] min-h-[32px] sm:min-w-[36px] sm:min-h-[36px]"
+                className="absolute top-2 right-2 sm:top-3 sm:right-3 lg:top-4 lg:right-4 z-[10001] bg-gray-800/90 hover:bg-red-600 text-white rounded-full p-2 sm:p-2.5 lg:p-3 transition-all duration-300 shadow-xl border-2 border-white/30 hover:border-red-400 flex items-center justify-center min-w-[40px] min-h-[40px] sm:min-w-[44px] sm:min-h-[44px] lg:min-w-[48px] lg:min-h-[48px] backdrop-blur-sm modal-close-button"
                 aria-label="Close modal"
                 style={{
                   position: 'absolute',
-                  zIndex: 10000,
-                  transform: 'none',
+                  zIndex: 10001,
+                  fontSize: '20px',
+                  fontWeight: 'bold',
+                  cursor: 'pointer',
+                  userSelect: 'none',
                 }}
               >
-                <X className="w-4 h-4 sm:w-5 sm:h-5 text-white font-bold" strokeWidth={3} />
+                <X className="w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7" strokeWidth={3} style={{ color: '#fff' }} />
               </button>
             </div>
 
