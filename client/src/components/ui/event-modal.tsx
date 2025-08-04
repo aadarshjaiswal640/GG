@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { X } from "lucide-react";
+import { X, Clock, Users, MapPin, Trophy, Zap, Info } from "lucide-react";
 
 interface EventModalProps {
   title: string;
@@ -10,7 +10,8 @@ interface EventModalProps {
 }
 
 const eventDetails = {
-  "ROBO WAR": `ROBOWARS PROBLEM STATEMENT
+  "ROBO WAR": {
+    description: `ROBOWARS PROBLEM STATEMENT
 
 Task
 Design and build a combat robot to battle other robots in a high-energy tournament, testing your machine's strength, strategy, and resilience. Ensure your creation adheres to all specified rules and safety guidelines for a fair and thrilling competition.
@@ -62,8 +63,18 @@ Turning robot on with people inside arena, damaging arena, late reporting, argui
 Victory Conditions:
 
 Opponent immobilized, higher score at match end, or opponent disqualified.`,
+    highlights: [
+      { icon: <Trophy className="w-5 h-5" />, label: "Prize", value: "₹1,50,000" },
+      { icon: <Users className="w-5 h-5" />, label: "Team Size", value: "Up to 5 members" },
+      { icon: <MapPin className="w-5 h-5" />, label: "Venue", value: "Sports Hanger" },
+      { icon: <Clock className="w-5 h-5" />, label: "Duration", value: "3 minutes" },
+    ],
+    gradient: "from-red-500 to-orange-600",
+    accent: "red-500"
+  },
   
-  "ROBO SOCCER": `ROBO SOCCER PROBLEM STATEMENT
+  "ROBO SOCCER": {
+    description: `ROBO SOCCER PROBLEM STATEMENT
 
 Task
 Design and build an autonomous robot to compete in strategic soccer matches against other robots, demonstrating precision control, ball handling, and tactical gameplay.
@@ -121,8 +132,18 @@ Wireless communication between team members allowed.
 Robot must be ready when called for match.
 
 Additional rules as provided by organizers.`,
+    highlights: [
+      { icon: <Trophy className="w-5 h-5" />, label: "Prize", value: "₹40,000" },
+      { icon: <Users className="w-5 h-5" />, label: "Team Size", value: "3-5 members" },
+      { icon: <Zap className="w-5 h-5" />, label: "Voltage", value: "25.2V max" },
+      { icon: <Clock className="w-5 h-5" />, label: "Duration", value: "2 × 5 minutes" },
+    ],
+    gradient: "from-green-500 to-emerald-600",
+    accent: "green-500"
+  },
   
-  "ROBO SUMO": `ROBO SUMO PROBLEM STATEMENT
+  "ROBO SUMO": {
+    description: `ROBO SUMO PROBLEM STATEMENT
 
 Task
 Design and build a robot to compete in traditional sumo wrestling adapted for autonomous robots, where the objective is to push opponent robots out of the arena.
@@ -184,150 +205,18 @@ Emergency stop mechanisms required.
 No sharp edges or dangerous components.
 
 Regular safety inspections before matches.`,
+    highlights: [
+      { icon: <Trophy className="w-5 h-5" />, label: "Prize", value: "₹25,000" },
+      { icon: <MapPin className="w-5 h-5" />, label: "Arena", value: "6-foot diameter" },
+      { icon: <Zap className="w-5 h-5" />, label: "Max Weight", value: "3kg" },
+      { icon: <Clock className="w-5 h-5" />, label: "Duration", value: "3 minutes" },
+    ],
+    gradient: "from-purple-500 to-violet-600",
+    accent: "purple-500"
+  },
   
-  "DRONE RACE": `DRONE RACE PROBLEM STATEMENT
-
-Task
-Test pilot skill navigating high-speed drones through obstacle courses by line-of-sight (LOS), demonstrating precision flying and agility control.
-
-THE DRONE RACING CHAMPIONSHIP
-
-Tests pilot skill navigating high-speed drones through obstacle courses by line-of-sight (LOS).
-
-RACE FORMAT
-
-Round 1: Static time trials, pilots position themselves and complete the course; top 8 fastest qualify.
-
-Round 2: Dynamic knockout heats, pilots allowed to move along sidelines; head-to-head eliminations.
-
-TRACK DESIGN
-
-Includes tight turns, elevation changes, gates; promotes precision, agility, consistent handling.
-
-Multiple difficulty levels with varying gate sizes.
-
-Elevation changes requiring vertical maneuvering.
-
-Timing gates for precise lap measurement.
-
-DRONE AND PILOT SAFETY
-
-Pre-race drone inspections (integrity, wiring, battery security).
-
-Required failsafe (cut throttle/disarm on signal loss).
-
-Marked pilot zones for crowd safety.
-
-Barriers and netting for track safety.
-
-Pilots must disarm if crashing or flying outside track.
-
-TECHNICAL RULES
-
-Max prop size: 6 inch (60xx); minimum 4 inch (40xx).
-
-Cinewhoops allowed with double hit points penalty.
-
-GPS modules banned; optical flow allowed but neutral.
-
-FPV cameras/goggles prohibited.
-
-Teams carry own gear, tools; no sharing.
-
-No spotters allowed.
-
-Strict penalty/disqualification conditions including damage, crashes, lateness.
-
-Batteries can be changed during gameplay; no repairs allowed.
-
-Lap counts, points, penalties announced on event day.
-
-Rules may be changed at event coordinator's discretion.
-
-SCORING SYSTEM
-
-Fastest lap times in qualifying rounds.
-
-Head-to-head elimination format in finals.
-
-Penalty seconds added for gate strikes or course violations.`,
-  
-  "OBSTACLE RACE": `OBSTACLE RACE PROBLEM STATEMENT
-
-Task
-Design and build a robot capable of autonomously navigating through complex obstacle courses featuring various terrain challenges and environmental hazards.
-
-ROBOT SPECIFICATIONS
-
-Max bot size: 30cm x 30cm x 30cm (5% tolerance).
-
-Max weight: 5 kg (5% tolerance).
-
-Max voltage: 16.8V.
-
-Wired control requires minimum 4m wire length.
-
-Wireless control must support dual-frequency.
-
-Robot body must NOT be from ready-made toys; kits allowed.
-
-COURSE DESIGN
-
-Arena includes muddy terrain, stones, gravel, water, bridges, ramps.
-
-Multiple elevation changes and surface transitions.
-
-Narrow passages requiring precision navigation.
-
-Timed checkpoints throughout the course.
-
-Arena specifications may vary by round.
-
-GENERAL RULES
-
-Team members must carry institute ID cards.
-
-Damaging the arena is penalized.
-
-Spectators stay outside arena boundary.
-
-Robot must complete course autonomously.
-
-Manual intervention results in time penalties.
-
-TIME PENALTIES
-
-Wheels touching boundary lines: +5 seconds.
-
-Manual assistance or hand touches: +10 seconds.
-
-Going completely off track: +15 seconds.
-
-Damaging course elements: +25 seconds.
-
-Failure to complete section: +30 seconds.
-
-NAVIGATION CHALLENGES
-
-Water crossing sections requiring waterproofing.
-
-Steep inclines testing motor power and traction.
-
-Precision movements through narrow corridors.
-
-Balance challenges on elevated platforms.
-
-TECHNICAL REQUIREMENTS
-
-Autonomous navigation systems recommended.
-
-Sensor integration for obstacle detection.
-
-Robust mechanical design for terrain handling.
-
-Weather-resistant construction for outdoor elements.`,
-  
-  "LINE FOLLOWER": `LINE FOLLOWER PROBLEM STATEMENT
+  "LINE FOLLOWER": {
+    description: `LINE FOLLOWER PROBLEM STATEMENT
 
 Task
 Design and build a fully autonomous robot that follows a line around a track with maximum speed and precision, demonstrating advanced sensor integration and control algorithms.
@@ -415,39 +304,194 @@ Primary: Completion time.
 Secondary: Line following accuracy.
 
 Penalties for going off-track or manual intervention.`,
+    highlights: [
+      { icon: <Trophy className="w-5 h-5" />, label: "Prize", value: "₹15,000" },
+      { icon: <Zap className="w-5 h-5" />, label: "Max Weight", value: "2kg" },
+      { icon: <MapPin className="w-5 h-5" />, label: "Track", value: "Complex path" },
+      { icon: <Clock className="w-5 h-5" />, label: "Mode", value: "Time trial" },
+    ],
+    gradient: "from-cyan-500 to-blue-600",
+    accent: "cyan-500"
+  },
+  
+  "OBSTACLE RACE": {
+    description: `OBSTACLE RACE PROBLEM STATEMENT
+
+Task
+Design and build a robot capable of autonomously navigating through complex obstacle courses featuring various terrain challenges and environmental hazards.
+
+ROBOT SPECIFICATIONS
+
+Max bot size: 30cm x 30cm x 30cm (5% tolerance).
+
+Max weight: 5 kg (5% tolerance).
+
+Max voltage: 16.8V.
+
+Wired control requires minimum 4m wire length.
+
+Wireless control must support dual-frequency.
+
+Robot body must NOT be from ready-made toys; kits allowed.
+
+COURSE DESIGN
+
+Arena includes muddy terrain, stones, gravel, water, bridges, ramps.
+
+Multiple elevation changes and surface transitions.
+
+Narrow passages requiring precision navigation.
+
+Timed checkpoints throughout the course.
+
+Arena specifications may vary by round.
+
+GENERAL RULES
+
+Team members must carry institute ID cards.
+
+Damaging the arena is penalized.
+
+Spectators stay outside arena boundary.
+
+Robot must complete course autonomously.
+
+Manual intervention results in time penalties.
+
+TIME PENALTIES
+
+Wheels touching boundary lines: +5 seconds.
+
+Manual assistance or hand touches: +10 seconds.
+
+Going completely off track: +15 seconds.
+
+Damaging course elements: +25 seconds.
+
+Failure to complete section: +30 seconds.
+
+NAVIGATION CHALLENGES
+
+Water crossing sections requiring waterproofing.
+
+Steep inclines testing motor power and traction.
+
+Precision movements through narrow corridors.
+
+Balance challenges on elevated platforms.
+
+TECHNICAL REQUIREMENTS
+
+Autonomous navigation systems recommended.
+
+Sensor integration for obstacle detection.
+
+Robust mechanical design for terrain handling.
+
+Weather-resistant construction for outdoor elements.`,
+    highlights: [
+      { icon: <Trophy className="w-5 h-5" />, label: "Prize", value: "₹20,000" },
+      { icon: <Zap className="w-5 h-5" />, label: "Max Weight", value: "5kg" },
+      { icon: <MapPin className="w-5 h-5" />, label: "Course", value: "Multi-terrain" },
+      { icon: <Clock className="w-5 h-5" />, label: "Penalties", value: "Time-based" },
+    ],
+    gradient: "from-yellow-500 to-orange-600",
+    accent: "yellow-500"
+  },
+  
+  "DRONE RACE": {
+    description: `DRONE RACE PROBLEM STATEMENT
+
+Task
+Test pilot skill navigating high-speed drones through obstacle courses by line-of-sight (LOS), demonstrating precision flying and agility control.
+
+THE DRONE RACING CHAMPIONSHIP
+
+Tests pilot skill navigating high-speed drones through obstacle courses by line-of-sight (LOS).
+
+RACE FORMAT
+
+Round 1: Static time trials, pilots position themselves and complete the course; top 8 fastest qualify.
+
+Round 2: Dynamic knockout heats, pilots allowed to move along sidelines; head-to-head eliminations.
+
+TRACK DESIGN
+
+Includes tight turns, elevation changes, gates; promotes precision, agility, consistent handling.
+
+Multiple difficulty levels with varying gate sizes.
+
+Elevation changes requiring vertical maneuvering.
+
+Timing gates for precise lap measurement.
+
+DRONE AND PILOT SAFETY
+
+Pre-race drone inspections (integrity, wiring, battery security).
+
+Required failsafe (cut throttle/disarm on signal loss).
+
+Marked pilot zones for crowd safety.
+
+Barriers and netting for track safety.
+
+Pilots must disarm if crashing or flying outside track.
+
+TECHNICAL RULES
+
+Max prop size: 6 inch (60xx); minimum 4 inch (40xx).
+
+Cinewhoops allowed with double hit points penalty.
+
+GPS modules banned; optical flow allowed but neutral.
+
+FPV cameras/goggles prohibited.
+
+Teams carry own gear, tools; no sharing.
+
+No spotters allowed.
+
+Strict penalty/disqualification conditions including damage, crashes, lateness.
+
+Batteries can be changed during gameplay; no repairs allowed.
+
+Lap counts, points, penalties announced on event day.
+
+Rules may be changed at event coordinator's discretion.
+
+SCORING SYSTEM
+
+Fastest lap times in qualifying rounds.
+
+Head-to-head elimination format in finals.
+
+Penalty seconds added for gate strikes or course violations.`,
+    highlights: [
+      { icon: <Trophy className="w-5 h-5" />, label: "Prize", value: "₹30,000" },
+      { icon: <Zap className="w-5 h-5" />, label: "Prop Size", value: "4-6 inch" },
+      { icon: <MapPin className="w-5 h-5" />, label: "Control", value: "Line of sight" },
+      { icon: <Clock className="w-5 h-5" />, label: "Format", value: "Time trials" },
+    ],
+    gradient: "from-blue-500 to-indigo-600",
+    accent: "blue-500"
+  }
 };
 
 export default function EventModal({ title, description, children }: EventModalProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const eventDescription = eventDetails[title as keyof typeof eventDetails] || description;
+  const [currentTab, setCurrentTab] = useState<'overview' | 'rules'>('overview');
+  const event = eventDetails[title as keyof typeof eventDetails];
 
   const handleOpen = () => {
     setIsOpen(true);
-    // Store current scroll position
-    const scrollY = window.scrollY;
-    document.body.setAttribute('data-scroll-locked', scrollY.toString());
-    
-    // Only prevent body scroll, don't fix position
     document.body.style.overflow = 'hidden';
-    document.body.style.paddingRight = '15px'; // Prevent layout shift from scrollbar
   };
 
   const handleClose = () => {
-    // Restore body scroll
-    const scrollY = document.body.getAttribute('data-scroll-locked');
-    document.body.style.overflow = '';
-    document.body.style.paddingRight = '';
-    document.body.removeAttribute('data-scroll-locked');
-    
-    // Restore scroll position if it was stored
-    if (scrollY) {
-      window.scrollTo(0, parseInt(scrollY));
-    }
-    
     setIsOpen(false);
+    document.body.style.overflow = '';
   };
 
-  // Handle escape key
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape' && isOpen) {
@@ -461,128 +505,143 @@ export default function EventModal({ title, description, children }: EventModalP
     }
   }, [isOpen]);
 
-  // Cleanup on unmount
   useEffect(() => {
     return () => {
       document.body.style.overflow = '';
-      document.body.style.paddingRight = '';
-      document.body.removeAttribute('data-scroll-locked');
     };
   }, []);
 
-  // Prevent event bubbling on modal content
-  const handleModalContentClick = (e: React.MouseEvent) => {
-    e.stopPropagation();
-  };
+  if (!event) return null;
 
   return (
     <>
       <Button 
         onClick={handleOpen}
-        variant="outline" 
-        className="border-2 border-primary/50 text-primary hover:bg-primary/20 hover:border-primary transition-all duration-300 neon-border"
+        className="bg-gradient-to-r from-primary to-cyan-400 hover:from-primary/80 hover:to-cyan-400/80 text-black font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
       >
-        Details
+        <Info className="w-4 h-4 mr-2" />
+        Learn More
       </Button>
 
       {isOpen && (
-        <div 
-          className="fixed inset-0 z-[9999] flex items-center justify-center p-2 sm:p-4"
-          style={{ 
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            overflowY: 'auto',
-            overflowX: 'hidden',
-          }}
-          onClick={handleClose}
-        >
-          {/* Backdrop */}
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4">
+          {/* Animated backdrop */}
           <div 
-            className="fixed inset-0 bg-black/80 backdrop-blur-sm"
-            style={{
-              position: 'fixed',
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              zIndex: 1,
-            }}
+            className="fixed inset-0 bg-black/60 backdrop-blur-md transition-opacity duration-300"
+            onClick={handleClose}
           />
           
-          {/* Modal Content */}
+          {/* Modal container */}
           <div 
-            className="relative w-full max-w-[95vw] sm:max-w-[90vw] lg:max-w-[75vw] xl:max-w-[70vw] bg-card/95 backdrop-blur-md border-2 border-primary/30 rounded-xl neon-border flex flex-col my-8"
-            style={{ 
-              maxHeight: 'calc(100vh - 4rem)',
-              height: 'auto',
-              zIndex: 2,
-              position: 'relative',
-              margin: '2rem auto',
-            }}
-            onClick={handleModalContentClick}
+            className="relative w-full max-w-6xl max-h-[90vh] bg-gradient-to-br from-gray-900/95 to-gray-800/95 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl transform transition-all duration-300 scale-100 animate-in zoom-in-95 fade-in-0"
+            onClick={(e) => e.stopPropagation()}
           >
-            {/* Header with Close Button */}
-            <div className="flex-shrink-0 flex items-center justify-between p-3 sm:p-4 lg:p-6 bg-card/95 backdrop-blur-md border-b border-primary/20 rounded-t-xl relative">
-              <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-primary pr-16 flex-1 min-w-0">
-                <span className="truncate block">{title}</span>
-              </h2>
-              {/* Enhanced Close Button */}
+            {/* Header with gradient background */}
+            <div className={`relative bg-gradient-to-r ${event.gradient} p-6 rounded-t-3xl`}>
+              <div className="absolute inset-0 bg-black/20 rounded-t-3xl" />
+              <div className="relative flex items-center justify-between">
+                <div>
+                  <h1 className="text-3xl font-bold text-white mb-2">{title}</h1>
+                  <div className="flex flex-wrap gap-4">
+                    {event.highlights.map((highlight, index) => (
+                      <div key={index} className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-3 py-1">
+                        <div className="text-white/80">{highlight.icon}</div>
+                        <span className="text-sm font-medium text-white/90">{highlight.label}:</span>
+                        <span className="text-sm font-bold text-white">{highlight.value}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                
+                <button 
+                  onClick={handleClose}
+                  className="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white rounded-full p-3 transition-all duration-200 hover:scale-110 group"
+                  aria-label="Close modal"
+                >
+                  <X className="w-6 h-6 group-hover:rotate-90 transition-transform duration-200" />
+                </button>
+              </div>
+            </div>
+
+            {/* Tab navigation */}
+            <div className="flex border-b border-white/10">
               <button 
-                onClick={handleClose}
-                className="absolute top-2 right-2 z-[100000] bg-red-600 hover:bg-red-700 text-white rounded-full p-4 transition-all duration-200 shadow-2xl border-4 border-white hover:border-white flex items-center justify-center min-w-[56px] min-h-[56px] modal-close-button hover:scale-110 active:scale-95"
-                aria-label="Close modal"
-                style={{
-                  position: 'absolute',
-                  top: '8px',
-                  right: '8px',
-                  zIndex: 100000,
-                  backgroundColor: '#dc2626',
-                  color: '#ffffff',
-                  border: '4px solid #ffffff',
-                  borderRadius: '50%',
-                  width: '56px',
-                  height: '56px',
-                  minWidth: '56px',
-                  minHeight: '56px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  cursor: 'pointer',
-                  fontSize: '24px',
-                  fontWeight: 'bold',
-                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.8), 0 0 0 2px rgba(255, 255, 255, 0.3), inset 0 0 0 2px rgba(255, 255, 255, 0.2)',
-                  backdropFilter: 'blur(8px)',
-                  WebkitBackdropFilter: 'blur(8px)',
-                }}
+                onClick={() => setCurrentTab('overview')}
+                className={`flex-1 py-4 px-6 font-semibold transition-all duration-200 ${
+                  currentTab === 'overview' 
+                    ? `text-${event.accent} border-b-2 border-${event.accent} bg-white/5` 
+                    : 'text-gray-400 hover:text-white hover:bg-white/5'
+                }`}
               >
-                <X className="w-8 h-8" strokeWidth={3} />
+                Overview
+              </button>
+              <button 
+                onClick={() => setCurrentTab('rules')}
+                className={`flex-1 py-4 px-6 font-semibold transition-all duration-200 ${
+                  currentTab === 'rules' 
+                    ? `text-${event.accent} border-b-2 border-${event.accent} bg-white/5` 
+                    : 'text-gray-400 hover:text-white hover:bg-white/5'
+                }`}
+              >
+                Rules & Details
               </button>
             </div>
 
-            {/* Scrollable Content */}
-            <div 
-              className="flex-1 px-3 sm:px-4 lg:px-6 py-3 sm:py-4 lg:py-6 universal-modal-scroll"
-              style={{
-                overflowY: 'auto',
-                overflowX: 'hidden',
-                overscrollBehavior: 'contain',
-                WebkitOverflowScrolling: 'touch',
-                touchAction: 'pan-y',
-                position: 'relative',
-                height: 'auto',
-                maxHeight: 'calc(100vh - 8rem)',
-                scrollbarWidth: 'thin',
-                scrollbarColor: 'hsl(195, 100%, 50%) hsl(240, 10%, 3.9%)',
-              }}
-            >
-              <div className="space-y-3 sm:space-y-4">
-                <div className="text-muted-foreground leading-relaxed text-xs sm:text-sm lg:text-base whitespace-pre-line break-words hyphens-auto">
-                  {eventDescription}
+            {/* Content area */}
+            <div className="p-6 max-h-[60vh] overflow-y-auto custom-scrollbar">
+              {currentTab === 'overview' ? (
+                <div className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {event.highlights.map((highlight, index) => (
+                      <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-4 border border-white/10 hover:bg-white/10 transition-all duration-300">
+                        <div className="flex items-center gap-3 mb-2">
+                          <div className={`bg-gradient-to-r ${event.gradient} p-2 rounded-lg text-white`}>
+                            {highlight.icon}
+                          </div>
+                          <div>
+                            <h3 className="font-semibold text-white">{highlight.label}</h3>
+                            <p className="text-gray-300">{highlight.value}</p>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+                    <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                      <Zap className={`w-5 h-5 text-${event.accent}`} />
+                      Quick Overview
+                    </h3>
+                    <p className="text-gray-300 leading-relaxed">
+                      {event.description.split('\n\n')[1] || event.description.split('\n')[2]}
+                    </p>
+                  </div>
                 </div>
-                {children}
+              ) : (
+                <div className="space-y-4">
+                  <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+                    <pre className="text-gray-300 leading-relaxed whitespace-pre-wrap font-mono text-sm">
+                      {event.description}
+                    </pre>
+                  </div>
+                </div>
+              )}
+              
+              {children}
+            </div>
+
+            {/* Footer */}
+            <div className="p-6 border-t border-white/10 bg-white/5 rounded-b-3xl">
+              <div className="flex justify-between items-center">
+                <div className="text-sm text-gray-400">
+                  Ready to compete? Register now to secure your spot!
+                </div>
+                <Button 
+                  onClick={() => window.open("https://stag.registrations.isdlabsrm.in", "_blank")}
+                  className={`bg-gradient-to-r ${event.gradient} hover:scale-105 text-white font-semibold px-8 py-2 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl`}
+                >
+                  Register Now
+                </Button>
               </div>
             </div>
           </div>
