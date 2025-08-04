@@ -1,0 +1,76 @@
+About Us Page Content
+Organizer
+SRM Institute of Science & Technology
+![SRM Institute Logo][image:1]
+
+Club
+Intelligent Systems Design Lab (ISD Lab)
+<img src="https://isdlabsrm.in/logo.svg" alt="ISD Lab Logo" style="height:56px;" />
+
+Sponsor
+GUVI – tech deserves you
+![GUVI Logo][image:3]
+
+HTML Page Specification – Roboroarz Event
+Build a fully responsive event page (“ROBOROARZ SRM University, 2025 – BATTLE OF SMART RACERS”) for your website using HTML, CSS, and (if needed) JavaScript.
+Integrate the following features and content:
+
+1. Navigation
+Add a new “Roboroarz” button just right of the “Events” button in the navbar.
+
+Clicking it loads /roboroarz.html (or your single-page view).
+
+2. Visual & Layout Guidelines
+Use a dark background with neon blue (#1ecbff) accents and glowing UI elements.
+
+Apply Google Fonts Orbitron (title/section), Inter or similar (body).
+
+Section content into sharply styled boxes/cards.
+
+Make sure all sections are mobile-responsive.
+
+3. Event Page Content
+Title (Hero):
+ROBOROARZ SRM University, 2025 – BATTLE OF SMART RACERS
+(Big, bold tech font with a neon-glow effect.)
+
+Event Details Box:
+
+text
+Event Name: Roboroarz
+Date: 10–12 September
+Perks: Placement offer and internship @ Singapore
+Fees: Fees na 😉
+Venue: TP2, 7th Floor
+SPOCs:
+  Faculty SPOC:
+    Dr. Vidhyalakshmi M K Ma'am
+    📧 vidhyalm1@srmist.edu.in | 📞 +91 94432 23066
+  Student SPOCs:
+    Harshil Malhotra
+    📧 hm3673@srmist.edu.in | 📞 6230931075
+    Harsh Arora
+    📞 +91 93725 85511
+Main Challenge:
+Teams must program and control their robot to race autonomously, follow lines, navigate tracks, and overcome technical obstacles.
+Embedded Videos Section ("STANDARD ROBOT PLATFORM"):
+Display 3 cards (flex on desktop, stacked on mobile):
+
+Introducing Smorphi:
+Watch how Smorphi robots can be configured for different movement patterns.
+Embed video: https://youtu.be/cOHIRPZTXrw?si=HWgjPAjMtuUvo85T
+
+RoboroarZ Singapore 2025:
+Placeholder for future video (use static image or empty video frame).
+
+Example of Competition Format:
+Showcases passion, teamwork, and excitement from a real RoboRoarZ competition.
+Embed video: https://youtu.be/OkzNq6RLPEc?si=meL8P70qxLHa01ij
+
+Floating “Register Now 🚀” Button:
+Fixed at bottom right, glows on hover, and links to:
+https://docs.google.com/forms/d/e/1FAIpQLSfeKZJQsO0JBYT3W29fj1FxiqhtxY6Zlb0hvKmdrpj_4mohNA/viewform?usp=header
+
+Footer:
+Add the Instagram icon/handle at page bottom:
+https://www.instagram.com/robofest.srm/

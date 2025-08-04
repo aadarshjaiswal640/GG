@@ -1,0 +1,52 @@
+ROBOWARS PROBLEM STATEMENT
+
+Task
+Design and build a combat robot to battle other robots in a high-energy tournament, testing your machine's strength, strategy, and resilience. Ensure your creation adheres to all specified rules and safety guidelines for a fair and thrilling competition.
+
+A. Basic Specifications
+
+Dimensions of Bot: The machine should fit inside a box of 75cm x 75cm x 100cm (L x B x H), including any extendable devices at the start of the match. External controls are not included in size.
+
+Weight: All batteries and weapons must be onboard (remote control excluded). There are two weight categories: 8kg (±1%) and 15kg (±1%).
+
+Arena: Square arena, 16 feet per side, enclosed with bulletproof polycarbonate.
+
+B. Mobility
+
+Robots must have visible and controlled mobility. Allowed mobility includes rolling (wheels, tracks), certain non-wheeled mechanisms (no continuous rolling), jumping, and hopping. Flying or securing to the arena (e.g., suction cups, glue) is not allowed.
+
+C. Control Requirements
+
+Wired bots are prohibited. Wireless controllers must support at least 4 frequencies or dual circuits to avoid interference. Binding capability is required. Autonomous functions are allowed but must be overrideable remotely, with a mandatory emergency stop operable via radio controller. Each bot must have a kill switch or equivalent to cut power within 20 seconds in emergencies.
+
+D. Battery and Power
+
+Only electrically powered bots with onboard batteries are allowed. Battery types include gel cells, lithium, NiMH, NiCad, or dry cells, protected securely inside the body. Max voltage is 52V DC anywhere on the machine. Battery swaps during matches are forbidden. A manual emergency stop via radio controller is required.
+
+E. Weapon Systems: Weapons NOT allowed
+
+Invisible damage types (electricity, RF, electromagnetic), liquid projectiles, inflammable materials, entanglement devices (nets, lines), smoke or light-based visual impairment weapons (lasers, strobes), hazardous materials, explosives.
+
+J. Safety Rules
+
+Robots must have battery protection. Design elements not covered by rules require organizer approval. Safety inspections will be conducted before competition. Weapons must have safety covers. No team personnel allowed inside arena during matches. Emergency kill methods must be present and functional.
+
+G. Rounds
+
+Robots start in corners, matches scheduled by judges with organizing team oversight. Teams get at least 45 minutes between matches for repairs, no extensions allowed.
+
+H. Scoring
+
+Judges score based on Damage (0-5), Aggression (0-3), Control (0-3). Criteria include functional damage, attack frequency/intensity, strategic control and evasion.
+
+I. Rules and Regulations
+
+Teams up to 5 members, only registered members can handle bots. Setup time 60 seconds, match duration 3 minutes. Multiple bots per category allowed. Fair play is mandatory. Disqualifications can occur for unsportsmanlike conduct or violation of rules.
+
+Disqualification Reasons Include:
+
+Turning robot on with people inside arena, damaging arena, late reporting, arguing with judges, unsafe robots.
+
+Victory Conditions:
+
+Opponent immobilized, higher score at match end, or opponent disqualified.

@@ -1,0 +1,138 @@
+2. Robo Soccer
+ROBOT SPECIFICATIONS
+Max dimensions: 30cm x 30cm x 30cm (5% tolerance).
+
+Both wired and wireless robots allowed.
+
+Max battery/circuit voltage: 25.2V.
+
+4-wheel or 2-wheel drive; all tyres must contribute motion.
+
+Robot body must not be from ready-made toys; robot kits allowed.
+
+Dribbler mechanisms permitted.
+
+Wired bots must have minimum 6-meter wire length.
+
+Each team member must carry institute ID card.
+
+GAME RULES
+Arena goals: 45cm wide.
+
+Spectators must stay outside boundary.
+
+Additional rules as provided by organizers (update as needed).
+
+3. Robo Sumo
+GENERAL RULES
+Competition based on last bot standing.
+
+Two bots compete in qualifiers; last bot inside arena wins.
+
+Match duration: 3 minutes, divided into two halves.
+
+Push opponent bot out of arena to score points.
+
+Early starts allowed a second chance; repeated offenses lead to disqualification.
+
+Robot must be ready when called.
+
+4-wheel or 2-wheel drive; all tyres contribute.
+
+Dribbler mechanisms allowed.
+
+Wires remain slack during gameplay.
+
+Wireless control must support dual-frequency operation.
+
+RF modules from toy cars allowed; IC engines and LEGO kits cause disqualification.
+
+Arena: 6-foot diameter circle without walls.
+
+4. Drone Race
+THE DRONE RACING CHAMPIONSHIP
+Tests pilot skill navigating high-speed drones through obstacle courses by line-of-sight (LOS).
+
+RACE FORMAT
+Round 1: Static time trials, pilots position themselves and complete the course; top 8 fastest qualify.
+
+Round 2: Dynamic knockout heats, pilots allowed to move along sidelines; head-to-head eliminations.
+
+TRACK DESIGN
+Includes tight turns, elevation changes, gates; promotes precision, agility, consistent handling.
+
+DRONE AND PILOT SAFETY
+Pre-race drone inspections (integrity, wiring, battery security).
+
+Required failsafe (cut throttle/disarm on signal loss).
+
+Marked pilot zones for crowd safety.
+
+Barriers and netting for track safety.
+
+Pilots must disarm if crashing or flying outside track.
+
+TECHNICAL RULES
+Max prop size: 6 inch (60xx); minimum 4 inch (40xx).
+
+Cinewhoops allowed with double hit points penalty.
+
+GPS modules banned; optical flow allowed but neutral.
+
+FPV cameras/goggles prohibited.
+
+Teams carry own gear, tools; no sharing.
+
+No spotters allowed.
+
+Strict penalty/disqualification conditions including damage, crashes, lateness.
+
+Batteries can be changed during gameplay; no repairs allowed.
+
+Lap counts, points, penalties announced on event day.
+
+Rules may be changed at event coordinator’s discretion.
+
+5. Obstacle Race
+ROBOT SPECIFICATIONS
+Max bot size: 30cm x 30cm x 30cm (5% tolerance).
+
+Max weight: 5 kg (5% tolerance).
+
+Max voltage: 16.8V.
+
+Wired control requires minimum 4m wire length.
+
+Wireless control must support dual-frequency.
+
+Robot body must NOT be from ready-made toys; kits allowed.
+
+GENERAL RULES
+Team members must carry institute ID cards.
+
+Arena includes muddy terrain, stones, gravel, water, bridges, ramps.
+
+Arena specifications may vary by round.
+
+Damaging the arena is penalized.
+
+Spectators stay outside arena boundary.
+
+Time penalties applied for wheels touching lines, hand touches, going off track (detailed +5 to +25 seconds penalties).
+
+6. Line Follower
+Fully autonomous robot follows a line around a track.
+
+Fastest time wins.
+
+Event date: 11th September.
+
+Entry fee: Rs. 200.
+
+Prize money: Rs. 15,000.
+
+Contact SPOCs:
+
+Faculty: Dr. Padmini S (padminis@srmist.edu.in)
+
+Student: Keith Cedrik Pereira (kp7809@srmist.edu.in)

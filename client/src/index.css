@@ -1,0 +1,345 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+
+  /* Custom Robotic Theme Colors */
+  --electric-blue: hsl(195, 100%, 50%);
+  --neon-cyan: hsl(180, 100%, 50%);
+  --neon-green: hsl(120, 100%, 50%);
+  --electric-purple: hsl(271, 76%, 53%);
+  --tech-gray: hsl(0, 0%, 10%);
+  --deep-space: hsl(0, 0%, 4%);
+  --metallic: hsl(0, 0%, 75%);
+  --dark-steel: hsl(0, 0%, 16%);
+  --robot-glow-color: #00D4FF;
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, hsl(0, 0%, 4%) 0%, hsl(0, 0%, 10%) 50%, hsl(0, 0%, 16%) 100%);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', monospace;
+  }
+}
+
+@layer components {
+  .hero-gradient {
+    background: linear-gradient(135deg, hsl(0, 0%, 4%) 0%, hsl(0, 0%, 10%) 50%, hsl(0, 0%, 16%) 100%);
+  }
+
+  .neon-text {
+    text-shadow: 0 0 10px hsl(180, 100%, 50%), 0 0 20px hsl(180, 100%, 50%), 0 0 30px hsl(180, 100%, 50%);
+  }
+
+  .glow-border {
+    border: 2px solid transparent;
+    background: linear-gradient(45deg, hsl(195, 100%, 50%), hsl(271, 76%, 53%), hsl(120, 100%, 50%)) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: subtract;
+  }
+
+  .card-hover {
+    transition: all 0.3s ease;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-10px) scale(1.02);
+    filter: drop-shadow(0 20px 40px rgba(0, 212, 255, 0.3));
+  }
+
+  .three-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .content-overlay {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+@layer utilities {
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite alternate;
+  }
+
+  .animate-rotate-gear {
+    animation: rotate-gear 4s linear infinite;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-scale-in {
+    animation: scale-in 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.8s ease-out;
+  }
+
+  .parallax {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+
+  .glass-morphism {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .tech-border {
+    border-image: linear-gradient(45deg, hsl(195, 100%, 50%), hsl(271, 76%, 53%), hsl(120, 100%, 50%)) 1;
+  }
+
+  .neon-border {
+    position: relative;
+    border: 2px solid transparent;
+    background: linear-gradient(var(--background), var(--background)) padding-box,
+                linear-gradient(45deg, hsl(195, 100%, 50%), hsl(271, 76%, 53%), hsl(120, 100%, 50%)) border-box;
+    border-radius: 12px;
+  }
+
+  .neon-border::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    padding: 2px;
+    background: linear-gradient(45deg, hsl(195, 100%, 50%), hsl(271, 76%, 53%), hsl(120, 100%, 50%));
+    border-radius: inherit;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: subtract;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+  }
+
+  .neon-border:hover::before {
+    filter: drop-shadow(0 0 10px hsl(195, 100%, 50%)) drop-shadow(0 0 20px hsl(271, 76%, 53%));
+  }
+
+  /* Hide scrollbars */
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  .scrollbar-hide::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+  }
+
+  /* Universal modal scrolling - works for all modals on all devices */
+  .universal-modal-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(195, 100%, 50%) hsl(var(--background));
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
+    overscroll-behavior: contain;
+    scroll-behavior: smooth;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    will-change: scroll-position;
+  }
+
+  .universal-modal-scroll::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .universal-modal-scroll::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+    border-radius: 3px;
+  }
+
+  .universal-modal-scroll::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, hsl(195, 100%, 50%), hsl(271, 76%, 53%));
+    border-radius: 3px;
+    border: 1px solid hsl(var(--background));
+  }
+
+  .universal-modal-scroll::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, hsl(195, 100%, 60%), hsl(271, 76%, 63%));
+  }
+
+  /* Enhanced mobile compatibility */
+  @media (max-width: 768px) {
+    .universal-modal-scroll {
+      -webkit-overflow-scrolling: touch;
+      overflow-scrolling: touch;
+      transform: translate3d(0, 0, 0);
+      backface-visibility: hidden;
+      perspective: 1000px;
+      -webkit-transform: translate3d(0, 0, 0);
+      -webkit-backface-visibility: hidden;
+      -webkit-perspective: 1000px;
+    }
+  }
+
+  /* Legacy modal scroll classes for backward compatibility */
+  .modal-scroll, .mobile-modal-scroll {
+    @apply universal-modal-scroll;
+  }
+}
+
+/* Universal Modal Scroll Styles */
+.universal-modal-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.universal-modal-scroll::-webkit-scrollbar-track {
+  background: hsl(240, 10%, 3.9%);
+  border-radius: 4px;
+}
+
+.universal-modal-scroll::-webkit-scrollbar-thumb {
+  background: hsl(195, 100%, 50%);
+  border-radius: 4px;
+}
+
+.universal-modal-scroll::-webkit-scrollbar-thumb:hover {
+  background: hsl(195, 100%, 40%);
+}
+
+/* Modal Close Button - Simplified styles */
+.modal-close-button {
+  pointer-events: auto;
+  touch-action: manipulation;
+}
+
+@keyframes pulse-glow {
+  0% { 
+    filter: drop-shadow(0 0 5px hsl(180, 100%, 50%)) brightness(1); 
+  }
+  100% { 
+    filter: drop-shadow(0 0 25px hsl(180, 100%, 50%)) brightness(1.2); 
+  }
+}
+
+@keyframes rotate-gear {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes scale-in {
+  0% { transform: scale(0.9); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes slide-up {
+  0% { transform: translateY(30px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes ripple {
+  0% { transform: scale(0); opacity: 1; }
+  100% { transform: scale(4); opacity: 0; }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .three-container {
+    height: 60vh !important;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-5px) scale(1.01);
+  }
+
+  .neon-text {
+    text-shadow: 0 0 5px hsl(180, 100%, 50%), 0 0 10px hsl(180, 100%, 50%);
+  }
+}
+
+/* Three.js Container Styles */
+.three-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.three-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  outline: none;
+}
+
+/* Neon border effects for modals and buttons */
+.neon-border {
+  box-shadow: 0 0 5px var(--robot-glow-color), 0 0 10px var(--robot-glow-color), 0 0 15px var(--robot-glow-color);
+}
+
+.neon-border:hover {
+  box-shadow: 0 0 10px var(--robot-glow-color), 0 0 20px var(--robot-glow-color), 0 0 30px var(--robot-glow-color);
+}
+
+/* High-performance animations for mobile */
+@media (prefers-reduced-motion: reduce) {
+  .animate-pulse-glow,
+  .animate-rotate-gear,
+  .animate-float {
+    animation: none;
+  }
+}

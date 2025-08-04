@@ -1,0 +1,109 @@
+Robofest 2025 Website Enhancement – Committee Page & Related Fixes
+1. Add a “Committee” Page in Navigation
+Navbar:
+Insert a new “Committee” page after “About” and before “Contact” (navigation order must match).
+
+Make sure the page is accessible from the navbar on all devices.
+
+2. Structure & Sections on Committee Page
+a. Patrons
+First section: "Patrons"
+
+Use the first 4 patron images provided (see images 1–4, already uploaded).
+
+Below each image, display the patron’s name and designation/title.
+
+Layout:
+
+On desktop: arrange cards/images in a clean horizontal row.
+
+On mobile/tablet: stack vertically OR enable a horizontal scroll/slider (user-friendly for wide lists).
+
+Use neat card or shadow styling to match Robofest's look and feel (modest neon outline if on-theme).
+
+b. Advisory Committee
+Next section: "Advisory Committee"
+
+For now, add 8-10 placeholder cards; user will provide images, names, designations next.
+
+Each card: placeholder image, "To be updated", and placeholder for designation.
+
+Use a horizontal scroller/slider for overflow—smooth on both desktop & mobile.
+
+c. Core Members
+Section: "Core Members"
+
+Same as Advisory: 8-10 placeholder cards (ready for user’s upcoming images).
+
+Each card: placeholder image and text ("To be updated", designation placeholder).
+
+Use horizontal scroller/slider as above.
+
+d. Developers
+Last section: "Developers"
+
+Add three cards: image, name, then designation (“Developer”) under each.
+
+Use placeholders for now if images not supplied.
+
+Layout should match rest (horizontal scroll if space needed).
+
+Accessibility:
+
+Every image should use ALT text in the format: “Full Name – Role/Committee”.
+
+Design/Implementation:
+
+Use reusable card components (if in React).
+
+All scrollers must be smooth and support both mouse/touch (swipe on mobile).
+
+If images/names not yet supplied, use “To be updated” clearly.
+
+3. Roborarz Page Fixes
+Replace “Video Unavailable”:
+
+Swap all “Video unavailable” or failed video areas with a relevant event static image or placeholder thumbnail.
+
+Remove Extra Social/Follow Us:
+
+Completely delete any “Follow Us @robofest…” or extra social media sections.
+
+Remove extra glow effects on Roborarz headings.
+
+Remove “Robot Assembly Showcase” section:
+
+Delete this section in its entirety.
+
+4. Responsiveness & Layout Bug Fixes
+Register Now Page:
+
+Remove all right-side gaps/empty space and fully eliminate horizontal scroll at every screen width.
+
+Ensure page content fits viewport (both desktop and mobile)—test thoroughly, especially on the Register Now screen.
+
+Site-wide:
+
+Review Committee, About, Register Now, and all modal popups for responsive issues.
+
+All cards (event/sponsor/committee), buttons, modals, and horizontal scrollers must scale and fit smoothly on all screens (mobile, tablet, desktop). No overflow, clipped text, or broken layouts.
+
+5. General
+Use descriptive alt text for each image (as above).
+
+All styles and components should follow the current Robofest site theme.
+
+Committee scrollers/components must not break if you add/remove members—future updates should be simple ("add to list" pattern).
+
+Leave comments in code to guide future editors on how to add/update committee members or images.
+
+Preview every change on both desktop and mobile before marking complete.
+
+Developer Notes
+You will receive more images and member details for Advisory and Core sections soon; current cards must be ready for these updates.
+
+If in React, use mapped arrays and modular card components for all committee member types.
+
+Make sure the Committee page is listed correctly in the navbar and is accessible from everywhere.
+
+If you have any confusion about image layout or card styling, follow the style used for event cards throughout the site.

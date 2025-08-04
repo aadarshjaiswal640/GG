@@ -1,0 +1,72 @@
+Enhance and refactor my Robofest 2025 website with the following detailed changes:
+
+1. ROBOFEST Logo Update:
+Replace the current "R" icon in the navbar and homepage header with the new image that I will upload.
+
+Ensure the logo updates correctly everywhere it appears, and alt text reflects "ROBOFEST Logo".
+
+2. Navbar Reordering and Refactor:
+Rearrange navbar so the "Roboroarz" menu item appears directly after "Events" and before "About".
+
+Ensure smooth scroll navigation/anchor linking continues to function seamlessly for all menu entries.
+
+3. Event Cards Enhancement:
+On each event card (e.g., Robo War, Robo Soccer, etc.), add a "Details" button.
+
+Clicking the "Details" button should open a modal popup or expandable section showing the full event details (details are provided below for all events — embed them accordingly).
+
+Style each modal/expansion with neon outlines that match the theme and look good in both light and dark modes.
+
+Remove the “Learn More” button everywhere in favor of the new "Details" popups.
+
+Event details content is included below for all events.
+
+Event Details Content:
+Robowar: [Insert the full Robowar details content provided above into the modal]
+Robo Soccer: [Insert full Robo Soccer details]
+Robo Sumo: [Insert full Robo Sumo details]
+Drone Race: [Insert full Drone Race details]
+Obstacle Race: [Insert full Obstacle Race details]
+Line Follower: [Insert full Line Follower details]
+
+4. Remove Obsolete Sections:
+Delete the ENTIRE "Robotic Assembly" and "Showcase" (video placeholders) sections.
+
+Replace those sections with relevant image thumbnails instead.
+
+5. About Section Redesign:
+Remove the "Our Mission, Vision, Values" content and heading completely.
+
+Add the SRM University and CTech Department logos (user will provide these) near the top of the new About section.
+
+In the Sponsor section, include cards labeled Platinum Sponsor, Gold Sponsor, and Silver Sponsor—each card should be able to show a sponsor logo.
+
+The sponsor cards should display horizontally on desktop and stack on mobile.
+
+6. Visual and UI Upgrades:
+Integrate interactive 3D robotic animations on the homepage and between sections using animated SVGs, Three.js, or other methods. You can use existing assets or find suitable ones as needed.
+
+Fix the robotic animation so it is fully visible and works on both desktop and mobile views—currently, it only works on desktop.
+
+Reduce or remove excessive glow effects from all major headings (like “ROBOFEST 2025” and event names) for a cleaner look.
+
+7. Footer & Contact Updates:
+Move the Instagram handle (@robofest.srm) to the footer—styled consistently with other footer items.
+
+Remove the old Instagram block from the body/middle of the page.
+
+8. Mobile Responsiveness & Bug Fixes:
+On the Register Now page, fix the layout to eliminate any extra horizontal scroll or empty space on the right side.
+
+Ensure all modals, sponsor cards, event cards, buttons, and animations SCALE PROPERLY across mobile and tablet views (test all breakpoints and fix layouts/CSS as needed).
+
+Keep existing color scheme, style, and core design UNLESS told otherwise. Write all code and configuration in a way that will work directly in my current Replit project.
+
+Developer Notes:
+You will receive new image/logo assets from the project owner.
+
+Full event details are embedded above; if you need them again, ask the owner to upload.
+
+Prioritize accessibility, performance, and clean code practices!
+
+Once done, preview the site on desktop and common mobile screen sizes to confirm all changes apply and layouts are correct.

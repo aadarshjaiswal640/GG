@@ -1,0 +1,60 @@
+Replit Instruction — Fix Event Card “Details” Button to Show Content
+Problem:
+When I click on the “Details” button on any event card (e.g., Robo War, Robo Soccer, etc.) on the website, nothing happens—the event modal does not open or show any details.
+
+What I Want:
+When the “Details” button is clicked on each event card, a styled modal (with neon outlines as previously requested) should open and display the correct event’s details. Each modal should contain the following event-specific content:
+
+Event Details Content to Display in Each Modal
+Robowar:
+Step into the thrilling arena of Robowar, where engineering ingenuity meets fierce competition. Witness custom-built machines clashing in an electrifying test of strategy, durability, and operator skill. With sparks flying and adrenaline surging, only the toughest bots will survive each round. Experience the excitement as teams push their robots—and nerves—to the limit in the quest for victory.
+
+Robo Soccer:
+Join the fast-paced world of Robo Soccer, where small but mighty robots battle to score goals with precision and teamwork. The field comes alive with robotic players executing passes, dribbles, and unstoppable shots, all guided by talented human strategists. Each match is packed with robotic excitement, nail-biting moves, and a race against the clock to outscore the rivals.
+
+Robo Sumo:
+Enter the circle for Robo Sumo, a true test of balance, technique, and mechanical muscle. In this showdown, robots grapple and push in a test of strength, aiming to force their opponents out of the arena. Every second counts as competitors adjust tactics, maneuver for better positions, and boldly attempt to become the last bot standing in a battle of engineering wits.
+
+Drone Race:
+Soar to new heights with the Drone Race, a mesmerizing spectacle of aerial skill and speed. Participants navigate challenging obstacle courses, weaving through tight gates and making split-second maneuvers while chasing the fastest lap time. The atmosphere buzzes with excitement as pilots demonstrate incredible control and daring, keeping the audience riveted to each suspenseful flight.
+
+Obstacle Race:
+Take on the ultimate Obstacle Race, where brave robots conquer a gauntlet of ramps, mud, and ever-changing terrain. Each turn presents new challenges—steep climbs, tricky bridges, and surprise barriers. Will your robot maintain agility and traction? The event pushes designs to their limits, rewarding the teams with the most resilient and adaptable creations.
+
+Line Follower:
+Test the intelligence and finesse of your autonomous designs in the Line Follower event! Sleek, sensor-driven robots zoom around intricate tracks, relying only on their programming and sensors to stay on course. The competition is fierce as every millisecond counts, and only the sharpest bots with the best algorithms make it to the finish line in record time.
+
+Technical Instructions for Developer
+Check Event Card Markup:
+Ensure each event card has a uniquely identifiable “Details” button (via data-event attribute or unique IDs).
+
+Implement Modal Logic:
+
+When a “Details” button is clicked, open a modal popup.
+
+The modal should display the specific details for that event only (based on which button was clicked).
+
+Only one modal should be open at a time; clicking outside or on a close button should dismiss the modal.
+
+Modal Content Mapping:
+
+Use a mapping (object or array) to associate each event (Robo War, Robo Soccer, etc.) with its corresponding event details as provided above.
+
+When a button is clicked, read its identifier and populate the modal with the matching content.
+
+Styling:
+
+The modal should have a neon-styled border/outline following the existing site theme.
+
+Ensure modal is fully responsive and works on both desktop and mobile.
+
+Testing:
+
+Click each Details button and confirm the corresponding event’s details are shown.
+
+Close the modal and confirm it clears as expected.
+
+Test on desktop and mobile breakpoints.
+
+Summary:
+Ensure clicking the “Details” button on any event card opens a modal popup with the matching event description from above. Style the modal as previously instructed, and ensure it’s bug-free on all devices.

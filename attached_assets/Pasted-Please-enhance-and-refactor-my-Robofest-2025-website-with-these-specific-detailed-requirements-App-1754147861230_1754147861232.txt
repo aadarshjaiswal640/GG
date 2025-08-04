@@ -1,0 +1,79 @@
+Please enhance and refactor my Robofest 2025 website with these specific, detailed requirements. Apply all changes directly within my current Replit project.
+
+1. ROBOFEST Logo Update
+Replace all instances of the current "R" icon (navbar and homepage header) with the new logo image I will upload.
+
+Ensure the logo updates everywhere it appears.
+
+The alt attribute for images should say: "ROBOFEST Logo".
+
+2. Navbar Reordering & Refactor
+In the navbar, place the "Roboroarz" menu item immediately after "Events" and before "About".
+
+Preserve smooth scroll navigation and working anchor linking for all navbar entries.
+
+3. Event Cards Enhancement
+On all event cards (e.g., Robowar, Robo Soccer, etc.), add a "Details" button.
+
+When clicked, open a modal popup (or, if easier, an expandable section) with full event details for that event.
+
+Style all modals/expansions with a themed neon outline that looks great and readable in both light and dark modes.
+
+REMOVE all “Learn More” buttons and replace them with the new "Details" popups.
+
+Use these placeholder paragraphs as the event details content in each modal:
+
+Event Details Content
+Robowar:
+Step into the thrilling arena of Robowar, where engineering ingenuity meets fierce competition. Witness custom-built machines clashing in an electrifying test of strategy, durability, and operator skill. With sparks flying and adrenaline surging, only the toughest bots will survive each round. Experience the excitement as teams push their robots—and nerves—to the limit in the quest for victory.
+
+Robo Soccer:
+Join the fast-paced world of Robo Soccer, where small but mighty robots battle to score goals with precision and teamwork. The field comes alive with robotic players executing passes, dribbles, and unstoppable shots, all guided by talented human strategists. Each match is packed with robotic excitement, nail-biting moves, and a race against the clock to outscore the rivals.
+
+Robo Sumo:
+Enter the circle for Robo Sumo, a true test of balance, technique, and mechanical muscle. In this showdown, robots grapple and push in a test of strength, aiming to force their opponents out of the arena. Every second counts as competitors adjust tactics, maneuver for better positions, and boldly attempt to become the last bot standing in a battle of engineering wits.
+
+Drone Race:
+Soar to new heights with the Drone Race, a mesmerizing spectacle of aerial skill and speed. Participants navigate challenging obstacle courses, weaving through tight gates and making split-second maneuvers while chasing the fastest lap time. The atmosphere buzzes with excitement as pilots demonstrate incredible control and daring, keeping the audience riveted to each suspenseful flight.
+
+Obstacle Race:
+Take on the ultimate Obstacle Race, where brave robots conquer a gauntlet of ramps, mud, and ever-changing terrain. Each turn presents new challenges—steep climbs, tricky bridges, and surprise barriers. Will your robot maintain agility and traction? The event pushes designs to their limits, rewarding the teams with the most resilient and adaptable creations.
+
+Line Follower:
+Test the intelligence and finesse of your autonomous designs in the Line Follower event! Sleek, sensor-driven robots zoom around intricate tracks, relying only on their programming and sensors to stay on course. The competition is fierce as every millisecond counts, and only the sharpest bots with the best algorithms make it to the finish line in record time.
+
+4. Remove Obsolete Sections
+DELETE the entire "Robotic Assembly" and "Showcase" sections (these have video placeholders).
+
+Do not add replacement images yet (or, if needed, add neutral image thumbnails).
+
+5. About Section Redesign
+Remove "Our Mission, Vision, Values" section and its heading completely.
+
+Add the SRM University and CTech Department logos (assets supplied by me) near the top of the About section.
+
+In the Sponsor section, create cards labeled:
+
+Platinum Sponsor
+
+Gold Sponsor
+
+Silver Sponsor
+Each card must support a sponsor logo (to be uploaded later). Display these cards in a row on desktop, stack vertically on mobile.
+
+6. Visual and UI Upgrades
+Integrate interactive 3D robotic animations on the homepage and between sections (using animated SVGs, Three.js, or similar). Use assets you have access to, or suitable free assets.
+
+Fix animations: Make all robotic animations fully visible and working on both desktop and mobile devices.
+
+Remove or minimize excessive glow on all main headings, such as “ROBOFEST 2025” and event names, for a cleaner appearance.
+
+7. Footer & Contact Updates
+Move the Instagram handle (@robofest.srm) from its current place into the site footer. Style it consistently with the rest of the footer.
+
+Delete/remove any old Instagram blocks from the body or middle of the home page.
+
+8. Mobile Responsiveness & Bug Fixes
+On the "Register Now" page, fix any layout bugs (e.g., eliminate any extra horizontal scrolling or right-side empty space).
+
+Make sure ALL modals, sponsor cards, event cards, buttons, and animations are fully responsive — scaling and displaying correctly on both mobile and tablet breakpoints.
