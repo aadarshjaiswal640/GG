@@ -1,3 +1,4 @@
+
 # ROBOFEST 2025 - Battle of Smart Racers
 
 A cutting-edge full-stack web application for ROBOFEST 2025, featuring advanced Three.js 3D robotic animations, comprehensive event information, and immersive user experiences optimized for both desktop and mobile devices.
@@ -39,7 +40,7 @@ Before running this project locally, ensure you have:
 - **npm** or **yarn** package manager
 - **Git** for version control
 
-## 🔧 Local Development Setup
+## 🔧 Local Development Setup (VS Code/localhost)
 
 ### 1. Clone the Repository
 
@@ -59,11 +60,14 @@ npm install
 Create a `.env` file in the root directory:
 
 ```env
+# Development Settings
+NODE_ENV=development
+
 # Database Configuration (Optional for development)
 DATABASE_URL="your-neon-database-url"
 
-# Development Settings
-NODE_ENV=development
+# Port Configuration
+PORT=5000
 ```
 
 **Note**: The application uses in-memory storage by default, so a database connection is optional for local development.
@@ -75,7 +79,7 @@ npm run dev
 ```
 
 This command will:
-- Start the Express.js backend server on port 5000
+- Start the Express.js backend server on localhost:5000
 - Launch the Vite development server with hot reload
 - Serve both frontend and backend on the same port
 
@@ -86,6 +90,38 @@ Open your browser and navigate to:
 http://localhost:5000
 ```
 
+**Important**: Do NOT use `http://0.0.0.0:5000` - this will not work on localhost. Always use `http://localhost:5000`.
+
+## 🐛 Common Localhost Issues & Solutions
+
+### Issue: "This site can't be reached" or "ERR_ADDRESS_INVALID"
+
+**Solution**: Make sure you're accessing `http://localhost:5000` and NOT `http://0.0.0.0:5000`
+
+### Issue: Port already in use
+
+**Solution**: 
+1. Stop any other processes using port 5000
+2. Or change the PORT in your `.env` file to another port like 3000 or 8000
+
+### Issue: Dependencies not found
+
+**Solution**:
+```bash
+# Clear npm cache and reinstall
+npm cache clean --force
+rm -rf node_modules package-lock.json
+npm install
+```
+
+### Issue: TypeScript errors
+
+**Solution**:
+```bash
+# Run type checking
+npm run check
+```
+
 ## 🌐 Available Pages
 
 - **Home** (`/`) - Hero section with 3D robot and event overview
@@ -94,6 +130,7 @@ http://localhost:5000
 - **Roboroarz** (`/roboroarz`) - Special event page with videos
 - **Registration** (`/registration`) - Competition registration form
 - **Contact** (`/contact`) - Contact form and information
+- **Committee** (`/committee`) - Team and committee information
 
 ## 🎮 3D Features
 
@@ -119,8 +156,11 @@ http://localhost:5000
 ## 🔨 Build Commands
 
 ```bash
-# Development
+# Development (localhost)
 npm run dev
+
+# Type checking
+npm run check
 
 # Build for production
 npm run build
@@ -128,17 +168,14 @@ npm run build
 # Start production server
 npm start
 
-# Type checking
-npm run type-check
-
 # Database operations (if using database)
-npm run db:generate
 npm run db:push
 ```
 
 ## 📁 Project Structure
 
 ```
+robofest-2025/
 ├── client/                 # Frontend React application
 │   ├── src/
 │   │   ├── components/     # Reusable UI components
@@ -147,14 +184,21 @@ npm run db:push
 │   │   │   └── layout/     # Layout components
 │   │   ├── pages/          # Page components
 │   │   ├── lib/            # Utility libraries
-│   │   └── hooks/          # Custom React hooks
+│   │   ├── hooks/          # Custom React hooks
+│   │   └── assets/         # Static assets
 │   └── index.html
 ├── server/                 # Backend Express application
 │   ├── index.ts           # Server entry point
 │   ├── routes.ts          # API routes
-│   └── storage.ts         # Data storage interface
+│   ├── storage.ts         # Data storage interface
+│   └── vite.ts            # Vite dev server setup
 ├── shared/                 # Shared types and schemas
-└── package.json
+├── attached_assets/        # Project assets and images
+├── .env                   # Environment variables (create this)
+├── package.json
+├── vite.config.ts
+├── tailwind.config.ts
+└── README.md
 ```
 
 ## 🎨 Customization
@@ -175,9 +219,20 @@ Modify Three.js scenes in `client/src/components/three/`:
 - `hero-robot-scene.tsx` - Hero mascot configuration
 - `feature-scene.tsx` - Assembly robot settings
 
+## 🚀 Deployment on Replit
+
+This project is optimized for Replit deployment. When deployed on Replit, it automatically uses `0.0.0.0` binding for external access.
+
 ## 🐛 Troubleshooting
 
-### Common Issues
+### Browser Compatibility
+
+- **Chrome**: Full support (recommended)
+- **Firefox**: Full support
+- **Safari**: Full support with WebGL enabled
+- **Edge**: Full support
+
+### Performance Issues
 
 1. **Three.js Not Loading**
    - Ensure Three.js CDN links are accessible
@@ -190,13 +245,6 @@ Modify Three.js scenes in `client/src/components/three/`:
 3. **Build Errors**
    - Clear `node_modules` and reinstall dependencies
    - Check TypeScript configuration
-
-### Browser Compatibility
-
-- **Chrome**: Full support (recommended)
-- **Firefox**: Full support
-- **Safari**: Full support with WebGL enabled
-- **Edge**: Full support
 
 ## 📞 Support
 
