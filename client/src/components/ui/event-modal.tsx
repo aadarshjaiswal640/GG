@@ -531,15 +531,17 @@ export default function EventModal({ title, description, children }: EventModalP
               </h2>
               <button 
                 onClick={handleClose}
-                className="absolute top-2 right-2 sm:top-3 sm:right-3 lg:top-4 lg:right-4 z-[10001] bg-gray-800/90 hover:bg-red-600 text-white rounded-full p-2 sm:p-2.5 lg:p-3 transition-all duration-300 shadow-xl border-2 border-white/30 hover:border-red-400 flex items-center justify-center min-w-[40px] min-h-[40px] sm:min-w-[44px] sm:min-h-[44px] lg:min-w-[48px] lg:min-h-[48px] backdrop-blur-sm modal-close-button"
+                className="fixed top-2 right-2 sm:top-3 sm:right-3 lg:top-4 lg:right-4 z-[99999] bg-red-600 hover:bg-red-700 text-white rounded-full p-2 sm:p-2.5 lg:p-3 transition-all duration-200 shadow-2xl border-2 border-white/50 hover:border-white flex items-center justify-center min-w-[44px] min-h-[44px] sm:min-w-[48px] sm:min-h-[48px] lg:min-w-[52px] lg:min-h-[52px] backdrop-blur-sm modal-close-button hover:scale-110 active:scale-95"
                 aria-label="Close modal"
                 style={{
-                  position: 'absolute',
-                  zIndex: 10001,
+                  position: 'fixed',
+                  zIndex: 99999,
                   fontSize: '20px',
                   fontWeight: 'bold',
                   cursor: 'pointer',
                   userSelect: 'none',
+                  pointerEvents: 'auto',
+                  touchAction: 'manipulation',
                 }}
               >
                 <X className="w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7" strokeWidth={3} style={{ color: '#fff' }} />
