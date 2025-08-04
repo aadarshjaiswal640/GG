@@ -260,15 +260,15 @@
 .modal-close-button {
   pointer-events: auto !important;
   touch-action: manipulation !important;
-  position: fixed !important;
-  top: 16px !important;
-  right: 16px !important;
+  position: absolute !important;
+  top: 8px !important;
+  right: 8px !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   background-color: #dc2626 !important;
   color: #ffffff !important;
-  font-size: 20px !important;
+  font-size: 24px !important;
   font-weight: bold !important;
   line-height: 1 !important;
   cursor: pointer !important;
@@ -279,16 +279,16 @@
   transform: translateZ(0) !important;
   backface-visibility: hidden !important;
   will-change: background-color, transform !important;
-  z-index: 99999 !important;
+  z-index: 100000 !important;
   border-radius: 50% !important;
-  width: 48px !important;
-  height: 48px !important;
-  min-width: 48px !important;
-  min-height: 48px !important;
-  border: 3px solid rgba(255, 255, 255, 0.6) !important;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.1) !important;
-  backdrop-filter: blur(4px) !important;
-  -webkit-backdrop-filter: blur(4px) !important;
+  width: 56px !important;
+  height: 56px !important;
+  min-width: 56px !important;
+  min-height: 56px !important;
+  border: 4px solid #ffffff !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8), 0 0 0 2px rgba(255, 255, 255, 0.3), inset 0 0 0 2px rgba(255, 255, 255, 0.2) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
 }
 
 .modal-close-button:hover {
@@ -310,21 +310,21 @@
 /* Enhanced mobile visibility */
 @media (max-width: 768px) {
   .modal-close-button {
-    min-width: 52px !important;
-    min-height: 52px !important;
-    width: 52px !important;
-    height: 52px !important;
-    padding: 12px !important;
-    font-size: 22px !important;
-    top: 20px !important;
-    right: 20px !important;
-    border: 4px solid rgba(255, 255, 255, 0.8) !important;
+    min-width: 60px !important;
+    min-height: 60px !important;
+    width: 60px !important;
+    height: 60px !important;
+    padding: 14px !important;
+    font-size: 26px !important;
+    top: 12px !important;
+    right: 12px !important;
+    border: 5px solid #ffffff !important;
   }
   
   .modal-close-button svg {
-    width: 28px !important;
-    height: 28px !important;
-    stroke-width: 4 !important;
+    width: 32px !important;
+    height: 32px !important;
+    stroke-width: 3 !important;
   }
 }
 
