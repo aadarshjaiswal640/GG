@@ -529,31 +529,35 @@ export default function EventModal({ title, description, children }: EventModalP
               <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-primary pr-16 flex-1 min-w-0">
                 <span className="truncate block">{title}</span>
               </h2>
+              {/* Enhanced Close Button */}
               <button 
                 onClick={handleClose}
-                className="absolute top-3 right-3 z-[99999] bg-red-600 hover:bg-red-700 text-white rounded-full p-2.5 transition-all duration-200 shadow-2xl border-2 border-white/20 hover:border-white flex items-center justify-center w-10 h-10 modal-close-button hover:scale-110 active:scale-95"
+                className="fixed top-4 right-4 z-[99999] bg-red-600 hover:bg-red-700 text-white rounded-full p-3 transition-all duration-200 shadow-2xl border-2 border-white/40 hover:border-white flex items-center justify-center min-w-[48px] min-h-[48px] modal-close-button hover:scale-110 active:scale-95"
                 aria-label="Close modal"
                 style={{
-                  position: 'absolute',
-                  top: '12px',
-                  right: '12px',
+                  position: 'fixed',
+                  top: '16px',
+                  right: '16px',
                   zIndex: 99999,
                   backgroundColor: '#dc2626',
                   color: '#ffffff',
-                  border: '2px solid rgba(255, 255, 255, 0.3)',
+                  border: '3px solid rgba(255, 255, 255, 0.6)',
                   borderRadius: '50%',
-                  width: '40px',
-                  height: '40px',
+                  width: '48px',
+                  height: '48px',
+                  minWidth: '48px',
+                  minHeight: '48px',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   cursor: 'pointer',
-                  fontSize: '18px',
+                  fontSize: '20px',
                   fontWeight: 'bold',
-                  boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3)',
+                  boxShadow: '0 6px 20px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.1)',
+                  backdropFilter: 'blur(4px)',
                 }}
               >
-                <X className="w-5 h-5" strokeWidth={3} />
+                <X className="w-6 h-6" strokeWidth={4} />
               </button>
             </div>
 
