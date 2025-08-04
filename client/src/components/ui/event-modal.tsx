@@ -531,20 +531,29 @@ export default function EventModal({ title, description, children }: EventModalP
               </h2>
               <button 
                 onClick={handleClose}
-                className="fixed top-2 right-2 sm:top-3 sm:right-3 lg:top-4 lg:right-4 z-[99999] bg-red-600 hover:bg-red-700 text-white rounded-full p-2 sm:p-2.5 lg:p-3 transition-all duration-200 shadow-2xl border-2 border-white/50 hover:border-white flex items-center justify-center min-w-[44px] min-h-[44px] sm:min-w-[48px] sm:min-h-[48px] lg:min-w-[52px] lg:min-h-[52px] backdrop-blur-sm modal-close-button hover:scale-110 active:scale-95"
+                className="absolute top-3 right-3 z-[99999] bg-red-600 hover:bg-red-700 text-white rounded-full p-2.5 transition-all duration-200 shadow-2xl border-2 border-white/20 hover:border-white flex items-center justify-center w-10 h-10 modal-close-button hover:scale-110 active:scale-95"
                 aria-label="Close modal"
                 style={{
-                  position: 'fixed',
+                  position: 'absolute',
+                  top: '12px',
+                  right: '12px',
                   zIndex: 99999,
-                  fontSize: '20px',
-                  fontWeight: 'bold',
+                  backgroundColor: '#dc2626',
+                  color: '#ffffff',
+                  border: '2px solid rgba(255, 255, 255, 0.3)',
+                  borderRadius: '50%',
+                  width: '40px',
+                  height: '40px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
                   cursor: 'pointer',
-                  userSelect: 'none',
-                  pointerEvents: 'auto',
-                  touchAction: 'manipulation',
+                  fontSize: '18px',
+                  fontWeight: 'bold',
+                  boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3)',
                 }}
               >
-                <X className="w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7" strokeWidth={3} style={{ color: '#fff' }} />
+                <X className="w-5 h-5" strokeWidth={3} />
               </button>
             </div>
 
