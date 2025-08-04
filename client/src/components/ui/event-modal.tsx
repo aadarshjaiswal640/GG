@@ -524,7 +524,7 @@ export default function EventModal({ title, description, children }: EventModalP
       </Button>
 
       {isOpen && (
-        <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4">
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center p-2 md:p-4">
           {/* Animated backdrop */}
           <div 
             className="fixed inset-0 bg-black/60 backdrop-blur-md transition-opacity duration-300"
@@ -533,7 +533,7 @@ export default function EventModal({ title, description, children }: EventModalP
           
           {/* Modal container */}
           <div 
-            className="relative w-full max-w-6xl max-h-[90vh] bg-gradient-to-br from-gray-900/95 to-gray-800/95 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl transform transition-all duration-300 scale-100 animate-in zoom-in-95 fade-in-0"
+            className="relative w-full max-w-7xl max-h-[95vh] md:max-h-[95vh] mobile-modal-large bg-gradient-to-br from-gray-900/95 to-gray-800/95 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl transform transition-all duration-300 scale-100 animate-in zoom-in-95 fade-in-0"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Header with gradient background */}
@@ -588,7 +588,7 @@ export default function EventModal({ title, description, children }: EventModalP
             </div>
 
             {/* Content area */}
-            <div className="p-6 max-h-[60vh] overflow-y-auto custom-scrollbar">
+            <div className="p-4 md:p-6 max-h-[70vh] mobile-modal-content overflow-y-auto custom-scrollbar">
               {currentTab === 'overview' ? (
                 <div className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -619,8 +619,8 @@ export default function EventModal({ title, description, children }: EventModalP
                 </div>
               ) : (
                 <div className="space-y-4">
-                  <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-                    <pre className="text-gray-300 leading-relaxed whitespace-pre-wrap font-mono text-sm">
+                  <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-4 md:p-6 border border-white/10">
+                    <pre className="text-gray-300 leading-relaxed whitespace-pre-wrap font-mono text-xs md:text-sm">
                       {event.description}
                     </pre>
                   </div>
